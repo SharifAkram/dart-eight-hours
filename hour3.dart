@@ -9,6 +9,7 @@ void main() {
   codeUnitsExample();
   typeCheckExample();
   conditionalExample();
+  bitwiseExample();
 }
 
 void lowerUpperExample() {
@@ -56,3 +57,54 @@ void conditionalExample() {
   c = (x > y) ? "x is greater than y" : "x is less than y";
   print(c);
 }
+
+void bitwiseExample() {
+  var x = 3;
+  var y = 2;
+  var z = (x & y);
+  print(z);
+  z = (x | y);
+  print(z);
+  z = (x ^ y);
+  print(z);
+  z = (~y);
+  print(z);
+  z = (x << y);
+  print(z);
+  z = (x >> y);
+  print(z);
+}
+
+/*
+
+Arithmetic:
+
+var add=100+200;
+print(add); // output 300
+var div=9~/2;
+print(div); // output 4
+var mod=10%3;
+print(mod); // output 1
+var inc=10;
+print(++inc); // output 11
+var str="abc"+"de";
+print(str); // output abcde
+
+Assignment Operators:
+
+double a = 100;
+double b = 2;
+print("a+=b : ${ a+=b }"); // return 102
+a = 100;
+b = 2;
+print("a-=b : ${ a-=b }"); // return 98
+a = 100;
+b = 2;
+print("a*=b' : ${ a*=b }"); // return 200
+a = 100;
+b = 2; print("a/=b : ${ a/=b }"); // return 50
+a = 100;
+b = 2;
+print("a%=b : ${ a%=b }"); // return 0
+
+*/
