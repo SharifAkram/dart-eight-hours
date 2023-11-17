@@ -1,9 +1,11 @@
-// Examples 5.1 ->
-
+// Examples 5.1 -> 6.2
 void main() {
   listExample();
   addRemoveListExample();
   firstLastExample();
+  replaceRangeExample();
+  mapExample();
+  mapConstructorExample();
 }
 
 void listExample() {
@@ -52,4 +54,42 @@ void firstLastExample() {
   // single element
   List<int> myList1 = [500];
   print(myList1.single);
+}
+
+void replaceRangeExample() {
+  List<int> myList = [0, 5, 6, 7, 8, 9];
+  print(myList);
+  myList.replaceRange(0, 3, [1, 2, 3]);
+  print(myList);
+}
+
+void mapExample() {
+  Map<String, dynamic> myMap = {'Name': 'Sharif', 'Age': '38'};
+  print(myMap);
+
+  // add & remove
+  myMap['Gender'] = 'Male';
+  print(myMap);
+  myMap.remove('Age');
+  print(myMap);
+
+  // keys & values
+  print(myMap.keys);
+  print(myMap.values);
+
+  //isEmpty & isNotEmpty
+  print(myMap.isEmpty);
+  print(myMap.isNotEmpty);
+
+  // length & clear()
+  print(myMap.length);
+  myMap.clear();
+  print("After clearing: $myMap");
+}
+
+void mapConstructorExample() {
+  Map<String, dynamic> myMap = new Map();
+  myMap['Name'] = 'Madison';
+  myMap['Age'] = '11';
+  print(myMap);
 }
